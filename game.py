@@ -9,8 +9,8 @@ from score import Score
 from utils import *
 
 COLOR_DEPTH = 8
-FPS = 60
-NUMBER_ASTEROIDS = 6
+FPS = 120
+NUMBER_ASTEROIDS = 5
 
 
 class Game():
@@ -50,6 +50,8 @@ class Game():
             if len(self.galaxy.get_entities_by_name("asteroid")) == 0:
                 self.score.increase_game_difficulty_by(1.11)
                 self.score.update_lives(+1)
+                self.galaxy.get_entity_by_name("score").update_ship_shielded(True)
+                pygame.time.set_timer(UNSHIELD_EVENT, 2500, 1)
                 for i in range(NUMBER_ASTEROIDS):
                     self.galaxy.add_entity(Asteroid(self.galaxy))
 

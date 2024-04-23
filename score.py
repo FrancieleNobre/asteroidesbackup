@@ -35,7 +35,7 @@ class Score(Entity):
 
         if (self.num_lives <= 0 and self.game_status == GAME_RUNNING):
             self.game_status = GAME_NOT_RUNNING
-            pygame.time.set_timer(NEW_GAME, 3000, 1)
+            pygame.time.set_timer(NEW_GAME, 5000, 1)
             Sound().play('siren')
 
     def render(self, surface):

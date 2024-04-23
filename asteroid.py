@@ -5,8 +5,8 @@ from pygame.math import Vector2
 from utils import *
 
 
-WIDTH = 3
-SCALE_FACTOR = 3
+WIDTH = 4
+SCALE_FACTOR = 4
 SPEED = 150.0
 ANGULAR_SPEED = 90.0
 
